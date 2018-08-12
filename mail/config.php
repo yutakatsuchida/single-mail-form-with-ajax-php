@@ -11,10 +11,10 @@ mb_internal_encoding("UTF-8");
 
 
 // Messages
-//define("EMAIL_TO_YOU_SUCCESS", "Your message has been sent successfully!");
+define("EMAIL_TO_YOU_SUCCESS", "Your message has been sent successfully!");
 define("EMAIL_TO_YOU_FAILED", "Failed to send your message. Please contact the webmaster.");
 
-//define("EMAIL_TO_QUESTIONER_SUCCESS", "Your message has been sent to you successfully!");
+define("EMAIL_TO_QUESTIONER_SUCCESS", "Your message has been sent to you successfully!");
 define("EMAIL_TO_QUESTIONER_FAILED", "Failed to send your message to you. Please contact the webmaster.");
 
 // Your Email that will be used both in sending to a questioner and notification email to you.

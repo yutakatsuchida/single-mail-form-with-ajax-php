@@ -22,13 +22,14 @@
             var $input_radio = $("input[type='radio']");
             var $form = $("form");
             var $submitButton = $("button[type='submit']");
-            var error = 0;
+            
 
 
             $("form").submit(function(event){
                 event.preventDefault();
                 
                 //initialize values
+                var error = 0;
                 var error_flags = new Array();
                 error_flags = [];
                 $("form .error").remove();
@@ -127,7 +128,7 @@
                         data: $form.serialize(),
                         timeout: 10000,  
                         beforeSend: function(xhr, settings) {
-                            // disable the submit button prevending double sending
+                            // disable the submit button prevending from double sending
                             $submitButton.attr('disabled', true);
                         },
                         complete: function(xhr, textStatus) {
@@ -139,15 +140,13 @@
                         success: function(result, textStatus, xhr) {
                             // initialize values
                             $form[0].reset();
-                            alert('OK');
+                            alert('Success');
                             console.log(result);
-                            console.log(textStatus);
-                            console.log(xhr);
                         },
                 
                         // if any sending errors
                         error: function(xhr, textStatus, error) {
-                            alert('NG...');
+                            alert('Error');
                         }
                     });
                 }
@@ -161,7 +160,7 @@
 
     
     <form method="post" action="./mail/sendmail.php">
-        <input type="hidden" name="action" value="true">
+
         <div class="form-group">
             <label for="fullname">Full Name</label>
 			<input id="fullname" class="form-control" type="text" name="fullname" value="">
