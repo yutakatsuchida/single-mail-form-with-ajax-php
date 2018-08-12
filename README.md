@@ -1,1 +1,1 @@
-# single-mail-form-with-ajax-php
+# Single Mail Form with Ajax & PHP
