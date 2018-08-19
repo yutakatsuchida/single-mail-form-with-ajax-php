@@ -8,10 +8,10 @@
 		
 		if (mb_send_mail(YOUR_EMAIL, QUESTIONER_SUBJECT, $to_you_massage, $to_you_header)) {
 			// if the message is sent
-			print EMAIL_TO_YOU_SUCCESS;
+			//print EMAIL_TO_YOU_SUCCESS;
 		} else {
 			// if the message is failed to send
-			print EMAIL_TO_YOU_FAILED;
+			//print EMAIL_TO_YOU_FAILED;
 		}
 
 		print "<br>";
